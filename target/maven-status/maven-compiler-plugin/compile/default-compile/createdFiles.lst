@@ -1,0 +1,7 @@
+ru/mybot/CLI.class
+ru/mybot/Main.class
+ru/mybot/CSV.class
+ru/mybot/Service.class
+ru/mybot/Database.class
+ru/mybot/Bot.class
+ru/mybot/MongoLogger.class
