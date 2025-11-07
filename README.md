@@ -10,7 +10,7 @@
 
 ---
 
-## 📋 Содержание  
+## Содержание  
 - [Описание проекта](#описание-проекта)  
 - [Технологии](#технологии)  
 - [Начало работы](#начало-работы)  
@@ -20,11 +20,9 @@
 - [Contributing](#contributing)  
 - [To do](#to-do)  
 - [Команда проекта](#команда-проекта)  
-- [Источники](#источники)  
-
 ---
 
-## 💡 Описание проекта  
+## Описание проекта  
 
 **Beauty Salon Bot** — это Telegram-бот, который:  
 - показывает список услуг и мастеров,  
@@ -36,21 +34,21 @@
 
 ---
 
-## 🧩 Технологии  
+## Технологии  
 
 | Компонент | Назначение | Документация |
 |------------|-------------|---------------|
-| ☕ **Java 17** | Основной язык разработки | [Java Docs](https://docs.oracle.com/en/java/) |
-| 🧰 **Maven** | Сборка и управление зависимостями | [Maven Docs](https://maven.apache.org/) |
-| 🤖 **TelegramBots API** | Работа с Telegram | [TelegramBots GitHub](https://github.com/rubenlagus/TelegramBots) |
-| 🐘 **PostgreSQL** | Основная база данных (услуги, клиенты, записи) | [PostgreSQL Docs](https://www.postgresql.org/docs/) |
-| 🍃 **MongoDB** | Логирование действий пользователей | [MongoDB Java Driver](https://www.mongodb.com/docs/drivers/java/sync/current/) |
-| 📄 **OpenCSV** | Импорт и экспорт CSV-файлов | [OpenCSV Docs](http://opencsv.sourceforge.net/) |
-| 🔄 **n8n** *(планируется)* | Автоматизация рабочих процессов | [n8n Docs](https://docs.n8n.io/) |
+| **Java 17** | Основной язык разработки | [Java Docs](https://docs.oracle.com/en/java/) |
+| **Maven** | Сборка и управление зависимостями | [Maven Docs](https://maven.apache.org/) |
+| **TelegramBots API** | Работа с Telegram | [TelegramBots GitHub](https://github.com/rubenlagus/TelegramBots) |
+| **PostgreSQL** | Основная база данных (услуги, клиенты, записи) | [PostgreSQL Docs](https://www.postgresql.org/docs/) |
+| **MongoDB** | Логирование действий пользователей | [MongoDB Java Driver](https://www.mongodb.com/docs/drivers/java/sync/current/) |
+| **OpenCSV** | Импорт и экспорт CSV-файлов | [OpenCSV Docs](http://opencsv.sourceforge.net/) |
+| **n8n** *(планируется)* | Автоматизация рабочих процессов | [n8n Docs](https://docs.n8n.io/) |
 
 ---
 
-## 🚀 Начало работы  
+## Начало работы  
 
 ### Требования  
 - Java 17+  
@@ -63,21 +61,19 @@
 mvn clean install
 Запуск бота
 bash
-Копировать код
 mvn compile exec:java
 Или собрать .jar и запустить:
 
 bash
-Копировать код
 mvn package
 java -jar target/bis-helper-bot.jar
-💬 Использование
-👩‍💻 Для клиентов (в Telegram):
+Использование
+Для клиентов (в Telegram):
 Найдите бота по username (созданному у @BotFather)
 
 Отправьте команду /start
 
-Выберите "💅 Услуги"
+Выберите "Услуги"
 
 Выберите нужную услугу (например, Маникюр)
 
@@ -88,13 +84,12 @@ java -jar target/bis-helper-bot.jar
 Пример взаимодействия:
 
 makefile
-Копировать код
 Клиент: /start
 Бот: 👋 Добро пожаловать!
-     [💅 Услуги] [📞 Контакты]
+     [Услуги]
 
 Клиент: *нажимает "Услуги"*
-Бот: 💅 Наши услуги:
+Бот: Наши услуги:
      [Маникюр (60 мин)]
      [Педикюр (90 мин)]
 
@@ -113,12 +108,10 @@ makefile
 CLI позволяет экспортировать записи, импортировать услуги и просматривать данные в БД.
 
 bash
-Копировать код
 mvn exec:java -Dexec.mainClass="ru.mybot.CLI"
 Пример меню CLI:
 
 markdown
-Копировать код
 === Beauty Salon CLI ===
 1. Экспорт записей
 2. Импорт услуг
@@ -132,23 +125,20 @@ markdown
 Проверка MongoDB логов:
 
 bash
-Копировать код
 use mybot_mongo
 db.logs.find().pretty()
 Проверка PostgreSQL:
 
 sql
-Копировать код
 SELECT * FROM services;
-☁️ Deploy
+## Deploy
 Через ngrok (локально)
 bash
-Копировать код
 ngrok http 5678
 На сервере
 Рекомендуется запускать через systemd или Docker (Dockerfile планируется добавить).
 
-🔄 Интеграция с n8n (в планах)
+## Интеграция с n8n (в планах)
 Интеграция позволит:
 
 отправлять данные о записях в n8n,
@@ -159,7 +149,7 @@ ngrok http 5678
 
 вызывать внешние API при новых событиях.
 
-🤝 Contributing
+## Contributing
 Хотите помочь с разработкой?
 
 Форкайте репозиторий
@@ -170,7 +160,7 @@ ngrok http 5678
 
 Или сообщайте об ошибках в разделе Issues
 
-🧾 To do
+## To do
  PostgreSQL + MongoDB
 
  CLI-режим
@@ -183,6 +173,6 @@ ngrok http 5678
 
  Панель администратора
 
-👥 Команда проекта
-Имя	Роль	Контакты
-Максим - Разработчик, архитектор	Telegram
+## Команда проекта
+Имя	Роль
+Максим - Разработчик, архитектор Telegram
